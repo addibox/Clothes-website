@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Home page</title>
+    <style>
+    .midlogo{
+         max-width:100%;
+         width:50%;
+         height: 70%;
+         }
+     
+     .biglogo{
+         width:100%;
+         height:400px;
+         display:flex;
+         align-items:center;
+         justify-content:center;
+         position: relative;
+         top:50px;
+         }
+
+     .topbar{
+         font-size:30px;
+         font-family: "Comic Sans MS";
+         background:black;
+         color:#f8f8ff;
+         width:100%;
+         height:60px;
+         padding:0;
+         z-index:999;
+         position:fixed;
+         top:0px;
+         }
+     .flexspacearound{
+         display:flex;
+         align-items:center;
+         justify-content:space-around;
+         }
+    .flexend{
+         display:flex;
+         align-items:center;
+         justify-content:flex-end;
+         }
+     
+     .logo{
+         width:80px;
+         height:60px;
+         }
+
+     .left{
+         float:left;
+     }
+     .right{
+         float:right;
+     }
+     .butarea{
+         width:100px;
+         height:60px;
+     }
+       
+     .footbar{
+         width:100%;
+         height:50px;
+         border:1px solid #cbcbcb;
+         margin:20px auto;
+         font-size:15px;
+         color:#a9a9a9;
+         position:fixed;
+         bottom: 8px;
+         font-family: "Times New Roman"
+     }
+     .footlogo{
+         width:80px;
+         height:50px;
+     }
+     
+     
+     a:link {color:white;}
+     a:visited {color:white;}    
+     a:hover {color:darkgreen;}  
+     a:active {color:#0000BB;} 
+
+
+    
+
+
+</style>
+
+<script language =javascript >
+var curIndex=0;
+//时间间隔(单位毫秒)，每秒钟显示一张，数组共有5张图片放在Photos文件夹下。图片路径可以是绝对路径或者相对路径
+var timeInterval=1500; //时间1秒
+var arr=new Array();
+arr[0]="erax1.jpg";
+arr[1]="erax11.jpg";
+arr[2]="erax9.jpg";
+arr[3]="erax4.jpg";
+arr[4]="erax7.jpg";
+arr[5]="erax16.jpg";
+setInterval(changeImg,timeInterval);
+function changeImg()
+{
+    var obj=document.getElementById("obj");
+    if (curIndex==arr.length-1) 
+    {
+        curIndex=0;
+    }
+    else
+    {
+        curIndex+=1;
+    }
+    obj.src=arr[curIndex];
+}
+</script>
+
+
+
+
+</head>
+<body> 
+    <div class="topbar topbarnav">
+        
+        <div class="logo left">
+          <img src="eralogo.jpg" class="logo">
+        </div>
+        <div class="right flexspacearound">
+            <div>
+                <a href="https://www.instagram.com/eraxliaison/">
+                     <img src="insta_but.jpg" class="butarea">
+                </a>
+            </div>
+            <div> 
+                <a href="https://www.facebook.com/ERAXLIAISON/?fref=ts">
+                    <img src="fb_but.jpg" class="butarea">
+                </a>
+            </div>
+    </div>
+        
+                    
+        <div class="flexspacearound">
+                  <div class="topbar-button topbar-item">
+                      <a href="Home page.html">Home</a>
+                    </div>
+                  <div  class="topbar-button topbar-item">
+                      <a href="shop page.html">Shop</a>
+                  </div>
+                  <div class="topbar-button topbar-item">
+                      <a href="Events.html">Events</a>
+                  </div>
+                  <div class="topbar-button topbar-item">
+                      <a href="FAQ page.html">FAQ</a>
+                  </div>
+                 <div class="topbar-button topbar-item">
+                      <a href="contact page.html">Contact US</a>
+                  </div>
+        </div>     
+            
+   
+    </div>
+
+        <div class="biglogo">
+            <img  src="erax1.jpg" class="midlogo" id="obj">
+        </div>
+
+       　
+
+
+           
+       
+         
+ 
+
+    <div class="footbar">
+         
+        <div class="left"><img src="eralogo.jpg" class="footlogo"></div>
+        
+        <div style="width:50%;height:50px;" class="flexspacearound right" >
+           <div class="topbar-button topbar-item">Our Member</div>
+           <div class="topbar-button topbar-item">Find A Store</div>
+           <div class="topbar-button topbar-item">Policy</div>
+           <div class="topbar-button topbar-item">Recurit</div>
+        </div>
+    
+    </div>
+ 
+</body>
+</html>
